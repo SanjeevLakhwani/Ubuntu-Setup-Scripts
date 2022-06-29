@@ -1,0 +1,21 @@
+{
+  "preInstallCommands": ["sudo apt update", "sudo apt upgrade"],
+  "baseInstalls": {
+    "workC3G": {
+      "fullInstall": {
+        "dependencies": ["slack", "dockerDesktop", "spotify", "postman", "vscode", "discord", "webstorm", "gh"],
+        "installationRuns": []
+      }
+    }
+  },
+  "individualInstalls": {
+    "snap": {
+      "dependencies": [],
+      "installationCommands": ["sudo apt install slack"]
+    },
+    "slack": {
+      "dependencies": ["snap"],
+      "installationCommands": []
+    }
+  }
+}
